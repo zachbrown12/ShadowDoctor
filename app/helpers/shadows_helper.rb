@@ -1,0 +1,2 @@
+module ShadowsHelper
+end

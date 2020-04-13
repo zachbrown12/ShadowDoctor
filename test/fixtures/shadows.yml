@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  doctor: one
+  start_date: 2020-04-13
+  length: MyString
+  accepted: false
+
+two:
+  student: two
+  doctor: two
+  start_date: 2020-04-13
+  length: MyString
+  accepted: false

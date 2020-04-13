@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  hospital: MyString
+  practice: MyString
+  participation: 1.5
+  notes: MyText
+
+two:
+  name: MyString
+  location: MyString
+  hospital: MyString
+  practice: MyString
+  participation: 1.5
+  notes: MyText

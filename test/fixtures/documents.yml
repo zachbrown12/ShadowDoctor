@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  document_name: MyString
+  document_type: MyString
+
+two:
+  student: two
+  document_name: MyString
+  document_type: MyString

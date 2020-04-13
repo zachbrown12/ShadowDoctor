@@ -1,0 +1,2 @@
+class ShadowsController < ApplicationController
+end
