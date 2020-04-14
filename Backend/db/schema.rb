@@ -14,9 +14,11 @@ ActiveRecord::Schema.define(version: 2020_04_13_182256) do
 
   create_table "doctors", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.string "city"
+    t.string "state"
     t.string "hospital"
     t.string "practice"
+    t.string "phone_number"
     t.float "participation"
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false

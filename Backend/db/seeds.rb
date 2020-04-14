@@ -1,25 +1,85 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
+##
+require 'rest-client'
+require 'json'
+require 'pry'
 
 Student.destroy_all
 Doctor.destroy_all
 Shadow.destroy_all
 Document.destroy_all
 
-s1 = Student.create(name:"Zach", school:"UNC", age: 25, bio: "Hello") 
-s2 = Student.create(name:"Komal", school:"FlatIron", age: 29, bio: "Sup") 
 
-d1 = Doctor.create(name:"Dr. Steve", location:"New York", hospital:"NYU Langone", practice:"Cardiologist", participation: 30.5, notes:"Very good doctor")
-d2 = Doctor.create(name:"Dr. Fauci", location:"Washington DC", hospital:"Retired", practice:"Epidemeology", participation: 50.6, notes:"Super Smart")
+skip = 0
 
-sd1 = Shadow.create(student_id: s1.id, doctor_id: d1.id, start_date: 04132020, length:"7 days", accepted: true)
-sd2 = Shadow.create(student_id: s2.id, doctor_id: d2.id, start_date: 04052020, length:"5 days", accepted: false)
+50.times do 
+    i = 0
+    doc_source = RestClient.get "https://api.1up.health/fhir/dstu2/Practitioner?_public=true&client_id=f1c1817ab463454b95b30282b5d83e2e&client_secret=K3gTbYeeiedmqCB97t5Nk1sdt3Gx5Go2&_skip=#{skip}", {:Authorization => 'Bearer 24001601744d4657937087636f16273c'}
+    doctors = JSON.parse(doc_source)
+    skip += 10
+     10.times do
+       doctor = doctors["entry"][i]
+           name = 
+             begin 
+              "#{(doctor["resource"]["name"]["given"][0])}, #{(doctors["entry"][i]["resource"]["name"]["family"][0])}"
+             rescue 
+              "Null"
+             end
+           city = 
+           begin 
+            "#{(doctors["entry"][i]["resource"]["address"][0]["city"])}"
+           rescue 
+            "Null"
+           end
+           state = 
+           begin 
+            "#{(doctors["entry"][i]["resource"]["address"][0]["state"])}"
+           rescue 
+            "Null"
+           end
+           hospital = 
+           begin 
+            "#{(doctors["entry"][i]["resource"]["address"][0]["line"][0])}"
+           rescue 
+            "Null"
+           end
+           practice = 
+           begin 
+            "#{(doctors["entry"][i]["resource"]["practitionerRole"][0]["role"]["coding"][0]["display"])}" 
+           rescue 
+            "Null"
+           end
+           phone_number = 
+           begin 
+            "#{(doctors["entry"][i]["resource"]["telecom"][0]["value"])}" 
+           rescue 
+            "Null"
+           end
+             
+       Doctor.create(
+        name: name,        
+        city: city,
+        state: state,
+        hospital: hospital,
+        practice: practice,
+        phone_number: phone_number
+    )
+        i += 1
+     end
+    sleep(0.2)
+    end
 
-dm1 = Document.create(student_id: s1.id, document_name:"Resume ZB", document_type:"Word")
-dm2 = Document.create(student_id: s1.id, document_name:"Cover Letter ZB", document_type:"PDF")
+
+
+
+
+
+##s1 = Student.create(name:"Zach", school:"UNC", age: 25, bio: "Hello") 
+##s2 = Student.create(name:"Komal", school:"FlatIron", age: 29, bio: "Sup") 
+##
+##sd1 = Shadow.create(student_id: s1.id, doctor_id: Doctor.all.first.id, start_date: 04132020, length:"7 days", accepted: true)
+##sd2 = Shadow.create(student_id: s2.id, doctor_id: Doctor.all.first.id, start_date: 04052020, length:"5 days", accepted: false)
+##
+##dm1 = Document.create(student_id: s1.id, document_name:"Resume ZB", document_type:"Word")
+##dm2 = Document.create(student_id: s1.id, document_name:"Cover Letter ZB", document_type:"PDF")
+
+    
