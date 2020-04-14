@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Toy Tale</title>
-    <script type="text/javascript" src="index.js"></script>
-    <!-- <link rel="stylesheet" href="index.css" /> -->
-  </head>
-  <body>
-        <h1>Welcome Page</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="stylesheet.css" rel="stylesheet">
+  <title>ShadowDoc</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="heading">Welcome to Shadow Doc</h1>
+    </div>
+
+    <div class="appointments">
+      <h2>Upcoming</h2>
+      <ul id="appointment-list">
+      </ul>
+    </div>
+
+    <div class="menu">
+      <h2>Profile</h2>
+      <div id="profile-menu">
+      </div>
+    </div>
+
+    <div class="custom">
+      <h2>Schedule:</h2>
+      <form id="custom-burger">
+        <label>Doctor Name:</label>
+        <input type="text" name="name" id="doctor-name">
+        <br/>
+        <label>Practice:</label>
+        <input type="text" name="practice" id="burger-practice">
+        <br/>
+        <label>Date:</label>
+        <input type="text" name="date" id="burger-date">
+        <br/>
+        <br/>
+        <input type="submit" value="Submit Order"></input>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="index.js" charset="utf-8"></script>
 </html>
