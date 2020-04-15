@@ -447,31 +447,6 @@ Processing by StudentsController#index as */*
 Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1193)
 
 
-<<<<<<< HEAD
-Started GET "/students" for ::1 at 2020-04-14 14:10:55 -0400
-  [1m[35m (10.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by StudentsController#index as */*
-  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
-  ↳ app/controllers/students_controller.rb:5:in `index'
-Completed 200 OK in 168ms (Views: 74.0ms | ActiveRecord: 1.0ms | Allocations: 8252)
-
-
-Started GET "/students" for ::1 at 2020-04-14 14:11:08 -0400
-Processing by StudentsController#index as */*
-  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
-  ↳ app/controllers/students_controller.rb:5:in `index'
-Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 1193)
-
-
-Started GET "/students" for ::1 at 2020-04-14 14:13:40 -0400
-Processing by StudentsController#index as */*
-  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
-  ↳ app/controllers/students_controller.rb:5:in `index'
-Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1193)
-
-
-=======
   [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
@@ -4146,7 +4121,6 @@ FOREIGN KEY ("student_id")
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mDoctor Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors" ("name", "city", "state", "hospital", "practice", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sandra, Cuartas"], ["city", "Hialeah"], ["state", "Fl"], ["hospital", "6600 W 12Th Ave"], ["practice", "Dentist"], ["phone_number", "3055560746"], ["created_at", "2020-04-14 18:36:19.264593"], ["updated_at", "2020-04-14 18:36:19.264593"]]
   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
->>>>>>> master
 Started GET "/students" for ::1 at 2020-04-14 15:15:50 -0400
   [1m[35m (10.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -4710,6 +4684,7 @@ Processing by DoctorsController#index as */*
 Completed 200 OK in 217ms (Views: 196.8ms | ActiveRecord: 20.0ms | Allocations: 97692)
 
 
+<<<<<<< HEAD
 Started GET "/doctors" for ::1 at 2020-04-15 15:42:46 -0400
   [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -4717,5 +4692,43 @@ Processing by DoctorsController#index as */*
   [1m[36mDoctor Load (2.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
   ↳ app/controllers/doctors_controller.rb:5:in `index'
 Completed 200 OK in 141ms (Views: 132.1ms | ActiveRecord: 2.7ms | Allocations: 106831)
+=======
+Started GET "/doctors" for ::1 at 2020-04-15 15:16:57 -0400
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (81.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1276ms (Views: 1057.3ms | ActiveRecord: 85.8ms | Allocations: 106892)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 15:17:00 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (14.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 413ms (Views: 396.8ms | ActiveRecord: 14.7ms | Allocations: 97674)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 15:17:14 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (20.9ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 380ms (Views: 357.4ms | ActiveRecord: 20.9ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 15:24:39 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (19.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1041ms (Views: 1020.9ms | ActiveRecord: 19.0ms | Allocations: 97705)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 15:29:51 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (14.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 507ms (Views: 490.9ms | ActiveRecord: 14.3ms | Allocations: 97660)
+>>>>>>> 40207e88a8f788b62627b450eb2e25320d131afe
 
 
