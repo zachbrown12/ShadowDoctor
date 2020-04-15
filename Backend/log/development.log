@@ -4532,3 +4532,181 @@ Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.4ms | Allocations: 901
 Completed 200 OK in 328ms (Views: 319.5ms | ActiveRecord: 4.7ms | Allocations: 98777)
 
 
+Started GET "/doctors" for ::1 at 2020-04-15 14:09:58 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (4.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 4.8ms | Allocations: 106979)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:17:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (3.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 84ms (Views: 79.7ms | ActiveRecord: 3.3ms | Allocations: 97698)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:17:58 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (20.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 85ms (Views: 64.4ms | ActiveRecord: 20.2ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:26:48 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (4.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 4.0ms | Allocations: 97701)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:26:50 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 2.4ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:27:17 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 2.2ms | Allocations: 97659)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:27:56 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (18.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 89ms (Views: 69.7ms | ActiveRecord: 18.5ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:28:26 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 2.2ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:28:53 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (3.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 92ms (Views: 88.3ms | ActiveRecord: 3.4ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:30:18 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.8ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 2.8ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:30:56 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 2.6ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:31:34 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (1.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 1.7ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:41:58 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (3.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 91ms (Views: 86.9ms | ActiveRecord: 3.5ms | Allocations: 97692)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:42:09 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 93ms (Views: 89.4ms | ActiveRecord: 2.5ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:43:39 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (1.9ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 82ms (Views: 79.3ms | ActiveRecord: 1.9ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:44:20 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 2.0ms | Allocations: 97662)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:46:18 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (3.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 176ms (Views: 162.4ms | ActiveRecord: 4.1ms | Allocations: 106844)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:48:33 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 190ms (Views: 176.1ms | ActiveRecord: 3.1ms | Allocations: 106834)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:49:57 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (3.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 3.0ms | Allocations: 97674)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:52:22 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (24.8ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 98ms (Views: 71.8ms | ActiveRecord: 24.8ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:53:29 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 98ms (Views: 94.9ms | ActiveRecord: 2.7ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:57:50 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (1.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 1.6ms | Allocations: 97677)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 14:58:31 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (2.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 2.2ms | Allocations: 97659)
+
+
+Started GET "/doctors" for ::1 at 2020-04-15 15:05:15 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (20.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 217ms (Views: 196.8ms | ActiveRecord: 20.0ms | Allocations: 97692)
+
+

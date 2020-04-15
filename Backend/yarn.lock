@@ -1414,6 +1414,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+
 bootstrap@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
@@ -3871,6 +3876,16 @@ jest-worker@^25.1.0:
   dependencies:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
+
+jquery.easing@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/jquery.easing/-/jquery.easing-1.4.1.tgz#47982c5836bd758fd48494923c4a101ef6e93e3b"
+  integrity sha1-R5gsWDa9dY/UhJSSPEoQHvbpPjs=
+
+jquery@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-base64@^2.1.8:
   version "2.5.2"
@@ -6638,6 +6653,31 @@ stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
+
+startbootstrap-full-width-pics@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/startbootstrap-full-width-pics/-/startbootstrap-full-width-pics-4.2.1.tgz#ccbaac4c095a62c8951f2cb28151f6d16b4ec6d7"
+  integrity sha512-sVyXVrNpF9nBSM5AIo4DEZWyXDDTDTKgx6BxX3IkMZuRjQSvDY//lOzD6hTk1rfJixyuVNgxqbTUDxZiHBfyBQ==
+  dependencies:
+    bootstrap "4.3.1"
+    jquery "3.4.1"
+
+startbootstrap-scrolling-nav@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/startbootstrap-scrolling-nav/-/startbootstrap-scrolling-nav-4.2.1.tgz#83dcea60c87b20b7535350ae27ceb082f091a50c"
+  integrity sha512-jhqlypc9KEHQcqsd87DB/3TD6NwdI9EvpI3aYjnkVznukBtXnLYZVMMoO339f3Sbkit5kIGn9tor0zAruYk+dg==
+  dependencies:
+    bootstrap "4.3.1"
+    jquery "3.4.1"
+    jquery.easing "^1.4.1"
+
+startbootstrap-shop-item@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/startbootstrap-shop-item/-/startbootstrap-shop-item-4.2.1.tgz#85503c4deb137e7a7c784823175ca5b39852ca6b"
+  integrity sha512-9vu/xG6cJNG8KrwJZEOkF6yNCq+yAI/nB7FxRfoAjuOZ90abYnOrMzN7VXxWlCtN4iRWvfMf6pCYGLRDEmoz9Q==
+  dependencies:
+    bootstrap "4.3.1"
+    jquery "3.4.1"
 
 static-extend@^0.1.1:
   version "0.1.2"
