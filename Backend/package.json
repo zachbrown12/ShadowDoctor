@@ -6,6 +6,10 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "bootstrap": "^4.4.1",
+    "startbootstrap-full-width-pics": "^4.2.1",
+    "startbootstrap-scrolling-nav": "^4.2.1",
+    "startbootstrap-shop-item": "^4.2.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

@@ -9,6 +9,7 @@ gem "rest-client"
 gem "json"
 gem "activesupport"
 gem 'pry'
+gem 'bootstrap', '~> 4.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'

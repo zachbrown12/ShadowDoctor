@@ -4147,3 +4147,388 @@ FOREIGN KEY ("student_id")
   [1m[36mDoctor Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors" ("name", "city", "state", "hospital", "practice", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sandra, Cuartas"], ["city", "Hialeah"], ["state", "Fl"], ["hospital", "6600 W 12Th Ave"], ["practice", "Dentist"], ["phone_number", "3055560746"], ["created_at", "2020-04-14 18:36:19.264593"], ["updated_at", "2020-04-14 18:36:19.264593"]]
   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
 >>>>>>> master
+Started GET "/students" for ::1 at 2020-04-14 15:15:50 -0400
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 59ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 3652)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:16:24 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.9ms | Allocations: 871)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:18:25 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 871)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:18:25 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 856)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:19:31 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 871)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:19:31 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (82.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1022ms (Views: 858.1ms | ActiveRecord: 85.9ms | Allocations: 106128)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:22:42 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:22:42 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 978)
+
+
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (71.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 499ms (Views: 423.1ms | ActiveRecord: 71.7ms | Allocations: 97702)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:23:05 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (67.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/doctors" for ::1 at 2020-04-14 15:23:06 -0400
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 86ms (Views: 16.8ms | ActiveRecord: 67.8ms | Allocations: 1922)
+
+
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (9.8ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1814ms (Views: 1802.9ms | ActiveRecord: 9.8ms | Allocations: 97688)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:23:58 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:23:58 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Processing by DoctorsController#index as */*
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1209)
+
+
+  [1m[36mDoctor Load (8.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 688ms (Views: 678.8ms | ActiveRecord: 8.3ms | Allocations: 97891)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:24:32 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 856)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:24:32 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (151.9ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1286ms (Views: 1133.1ms | ActiveRecord: 151.9ms | Allocations: 97675)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:24:43 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:24:43 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (19.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1010ms (Views: 989.3ms | ActiveRecord: 19.5ms | Allocations: 97675)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:24:57 -0400
+Started GET "/students" for ::1 at 2020-04-14 15:24:57 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (87.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.3ms | Allocations: 6167)
+
+
+Completed 200 OK in 1341ms (Views: 1252.8ms | ActiveRecord: 87.5ms | Allocations: 98315)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:25:05 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1676)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:25:05 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (36.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1692ms (Views: 1653.6ms | ActiveRecord: 36.2ms | Allocations: 97667)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:25:59 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 1531)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:25:59 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (12.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1540ms (Views: 1526.0ms | ActiveRecord: 12.6ms | Allocations: 97673)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:26:46 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:26:46 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (10.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 6170)
+
+
+Completed 200 OK in 1820ms (Views: 1809.1ms | ActiveRecord: 10.1ms | Allocations: 98104)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:28:50 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1495)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:28:50 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (10.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 515ms (Views: 502.8ms | ActiveRecord: 10.6ms | Allocations: 97669)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:29:18 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:29:18 -0400
+Processing by StudentsController#index as */*
+Processing by DoctorsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 5580)
+
+
+  [1m[36mDoctor Load (12.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 2052ms (Views: 2038.2ms | ActiveRecord: 12.6ms | Allocations: 98562)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:29:27 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:29:27 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (7.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 5790)
+
+
+Completed 200 OK in 1404ms (Views: 1395.0ms | ActiveRecord: 7.5ms | Allocations: 97957)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:29:45 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 857)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:29:45 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (16.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1867ms (Views: 1849.4ms | ActiveRecord: 16.5ms | Allocations: 97676)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:29:51 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:29:51 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (14.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1266ms (Views: 1249.5ms | ActiveRecord: 14.4ms | Allocations: 97663)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:30:35 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:30:35 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (9.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 109ms (Views: 107.9ms | ActiveRecord: 0.3ms | Allocations: 8752)
+
+
+Completed 200 OK in 1346ms (Views: 1334.7ms | ActiveRecord: 9.3ms | Allocations: 99147)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:30:45 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:30:45 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (9.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1398ms (Views: 1387.2ms | ActiveRecord: 9.5ms | Allocations: 97676)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:33:15 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:33:16 -0400
+Processing by DoctorsController#index as */*
+Processing by StudentsController#index as */*
+  [1m[36mDoctor Load (8.3ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.2ms | Allocations: 11435)
+
+
+Completed 200 OK in 1090ms (Views: 1080.8ms | ActiveRecord: 8.3ms | Allocations: 98786)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:36:12 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:36:12 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 857)
+
+
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (7.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 708ms (Views: 698.9ms | ActiveRecord: 7.7ms | Allocations: 97672)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:36:57 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:36:57 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (15.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1519ms (Views: 1502.5ms | ActiveRecord: 15.6ms | Allocations: 97721)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:37:15 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Started GET "/doctors" for ::1 at 2020-04-14 15:37:15 -0400
+Processing by DoctorsController#index as */*
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.3ms | Allocations: 1675)
+
+
+  [1m[36mDoctor Load (39.6ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 588ms (Views: 545.1ms | ActiveRecord: 39.6ms | Allocations: 97894)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:37:39 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 868)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:37:39 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (16.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 1150ms (Views: 1132.0ms | ActiveRecord: 16.2ms | Allocations: 97675)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:43:07 -0400
+Started GET "/doctors" for ::1 at 2020-04-14 15:43:07 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+Processing by StudentsController#index as */*
+  [1m[36mDoctor Load (27.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.9ms | Allocations: 30448)
+
+
+Completed 200 OK in 293ms (Views: 264.7ms | ActiveRecord: 27.4ms | Allocations: 98827)
+
+
+Started GET "/students" for ::1 at 2020-04-14 15:43:32 -0400
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (25.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 3.5ms | ActiveRecord: 25.0ms | Allocations: 1022)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 15:43:32 -0400
+Processing by DoctorsController#index as */*
+  [1m[36mDoctor Load (83.0ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+Completed 200 OK in 450ms (Views: 366.1ms | ActiveRecord: 83.0ms | Allocations: 97672)
+
+
+Started GET "/doctors" for ::1 at 2020-04-14 16:01:25 -0400
+Started GET "/students" for ::1 at 2020-04-14 16:01:25 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoctorsController#index as */*
+Processing by StudentsController#index as */*
+  [1m[36mDoctor Load (4.7ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/doctors_controller.rb:5:in `index'
+  ↳ app/controllers/students_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.4ms | Allocations: 9014)
+
+
+Completed 200 OK in 328ms (Views: 319.5ms | ActiveRecord: 4.7ms | Allocations: 98777)
+
+
