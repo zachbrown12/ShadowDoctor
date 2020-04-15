@@ -33,6 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
             docNum.innerText = doctor.phone_number
 
 
+            let form = document.createElement('p')
+            form.innerHTML = `<form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Please choose enter a date: </label>
+              <input type="date" date="date" id="date" required>
+              <label for="name">Please enter shadow duration: </label>
+              <input type="text" length="length" id="length" required>
+            </div>
+            `
+
             let btn = document.createElement('button')
             btn.setAttribute('class', 'schedule-btn')
             btn.setAttribute('id', doctor.id)
@@ -44,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
               let divCard = document.createElement('div')
               divCard.setAttribute('class', 'docCard')
-              divCard.append(docName, docCity, docPrac, docNum, btn)
+              divCard.append(docName, docCity, docPrac, docNum, form, btn)
               doctorsList.append(divCard)
             
             // event listener for Schedule Button
