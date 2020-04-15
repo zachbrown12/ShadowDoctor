@@ -1,47 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="stylesheet.css" rel="stylesheet">
-  <title>ShadowDoc</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shadow Doc</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1 id="heading">Welcome to Shadow Doc</h1>
-    </div>
 
-    <div class="appointments">
-      <h2>Upcoming</h2>
-      <ul id="appointment-list">
-      </ul>
-    </div>
+<body id="page-top">
 
-    <div class="menu">
-      <h2>Profile</h2>
-      <div id="profile-menu">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome to ShadowDoc</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Sign-In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Shadow</a>
+          </li>
+          
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="custom">
-      <h2>Schedule:</h2>
-      <form id="custom-burger">
-        <label>Doctor Name:</label>
-        <input type="text" name="name" id="doctor-name">
-        <br/>
-        <label>Practice:</label>
-        <input type="text" name="practice" id="burger-practice">
-        <br/>
-        <label>Date:</label>
-        <input type="text" name="date" id="burger-date">
-        <br/>
-        <br/>
-        <input type="submit" value="Submit Order"></input>
-      </form>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to  ShadowDoc</h1>
+      <p class="lead">Bio goes here</p>
     </div>
-  </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Current Appointments</h2>
+          <p class="lead">View current appointments here</p>
+          <ul>
+            <li>Appointment 1</li>
+            <li>Appointment 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Doctors API</h2>
+          <p class="lead">Use API to schedule appointments with form</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+  <!-- <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">ShadowDoc For information on the CoronaVirus, please visit: <a href="https://www.worldometers.info/coronavirus/" target="_blank">CoronaVirusUpdates</a></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
 </body>
-<script src="index.js" charset="utf-8"></script>
+
 </html>
