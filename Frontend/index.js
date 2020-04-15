@@ -1,0 +1,73 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let doctorsList = document.querySelector('.doctors')
+
+    fetchDoctors()
+
+    function fetchDoctors() {
+      fetch(`http://localhost:3000/doctors`) 
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(doctors) {
+        renderDoctors(doctors)
+      })
+    }
+
+
+    function renderDoctors(doctors){
+        doctorsList.innerHTML = ''
+        for (let doctor of doctors) {
+            // doctor name, doctor city, doctor practice, button
+            let docName = document.createElement('h2')
+            docName.innerText = doctor.name
+            
+            let docCity = document.createElement('p')
+            docCity.innerText = `${doctor.city}, ${doctor.state}`
+
+            let docPrac = document.createElement('p')
+            docPrac.innerText = doctor.practice
+
+            let docNum = document.createElement('p')
+            docNum.innerText = doctor.phone_number
+
+
+            let btn = document.createElement('button')
+            btn.setAttribute('class', 'schedule-btn')
+            btn.setAttribute('id', doctor.id)
+            btn.innerText = "Schedule"
+            //btn.addEventListener('click', (e) => {
+            //    console.log(e.target.dataset);
+            //    likes(e)
+            //  })
+            
+              let divCard = document.createElement('div')
+              divCard.setAttribute('class', 'docCard')
+              divCard.append(docName, docCity, docPrac, docNum, btn)
+              doctorsList.append(divCard)
+            
+            // event listener for Schedule Button
+            btn.addEventListener('click', (e) => {
+                console.log(e.target)
+            })
+            }
+        }
+
+   // // add listener to 'Add Toy' button to show or hide form
+   // addBtn.addEventListener('click', () => {
+   // // hide & seek with the form
+   // addToy = !addToy
+   // if (addToy) {
+   //   toyForm.style.display = 'block'
+   //   toyForm.addEventListener('submit', event => {
+   //     event.preventDefault()
+   //     postToy(event.target)
+   //   })
+   // } else {
+   //   toyForm.style.display = 'none'
+   // }
+  //}//)
+    
+
+})
