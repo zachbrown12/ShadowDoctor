@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="form-example">
               <label for="name">Please enter a date: </label>
               <input type="date" date="date" id="date" required><br>
-              <label for="name">Please enter shadow duration: </label>
+              <label for="name">Please enter shadow duration by day: </label>
               <input type="text" length="length" id="length" required><br>
               <input type="submit" data-id=${doctor.id} name="submit" value="Schedule Appointment" class="submit-appt"
             </div>
@@ -113,10 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.setAttribute('class', 'schedule-btn')
             btn.setAttribute('id', doctor.id)
             btn.innerText = "Schedule"
-            //btn.addEventListener('click', (e) => {
-            //    console.log(e.target.dataset);
-            //    likes(e)
-            //  })
+
+            //redirect button once clicked
+            btn.addEventListener('click', (e) => {
+               console.log(e.target.dataset);
+               likes(e)
+             })
             
               let divCard = document.createElement('div')
               divCard.setAttribute('class', 'docCard')
@@ -149,6 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
         currentStudent.innerText= student.name
         studentForm.append(currentStudent)
     }
+        
+    
+    //   // delete button 
+    // let deleteBtn = document.createElement('p')
+    // deleteBtn.innerText = "Cancel"
+
+    //  //redirect button once clicked
+    //  deletebtn.addEventListener('click', (e) => {
+    //   if(event.target.dataset.purpose === 'delete'){
+    //     let deletebtn = event.target
+    //     deletebtn.parentNode.remove()
+    //   }
+    // })
 
     function renderShadows(shadows){
       shadowsList.innerHTML = ''
@@ -168,10 +183,11 @@ document.addEventListener("DOMContentLoaded", () => {
           length.innerText = `Length: ${shadow.length}`
           
             let divCard = document.createElement('div')
-            divCard.setAttribute('class', 'shadowCard')
+            divCard.style.border = "#CCCCCC 1px solid"
+            divCard.setAttribute('class', 'shadowCard', )
             divCard.append(student, doctor, date, length)
             shadowsList.append(divCard)
      }
     }
-        
+  
 })
