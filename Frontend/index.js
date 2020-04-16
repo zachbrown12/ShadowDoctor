@@ -4,6 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let doctorsList = document.querySelector('.doctors')
     let studentForm = document.querySelector('#student-form')
     let shadowsList = document.querySelector('.shadows')
+    let searchBar = document.querySelector('#search-form')
+    //search bar
+    searchBar.addEventListener('keyup', function(e){
+      const term = e.target.value.toLowerCase()
+      const practice = list.getElementsByTagName('p')
+      Array.from(practice).forEach(function(practice){
+        const title =practice.firstElementChild.textContent
+        if(title.toLowerCase().indexOf(term)!=-1){
+          practice.style.display = 'block'
+        } else{
+          practice.style.display = 'none'
+        }
+      })
+    })
 
     fetchDoctors()
     fetchShadows()
