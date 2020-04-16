@@ -1,4 +1,7 @@
 
+var twilio = require('twilio');
+var client = new twilio('ACd812a9382ba3609fb7adfbd63125a274', '22257438227a416de06f2a02662160bc');
+
 document.addEventListener("DOMContentLoaded", () => {
 
     let doctorsList = document.querySelector('.doctors')
@@ -155,16 +158,16 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let doctor of doctors) {
             // doctor name, doctor city, doctor practice, button
             let docName = document.createElement('h2')
-            docName.innerText = doctor.name
+            docName.innerText = `Name: ${doctor.name}`
             
             let docCity = document.createElement('p')
-            docCity.innerText = `${doctor.city}, ${doctor.state}`
+            docCity.innerText = `Location: ${doctor.city}, ${doctor.state}`
 
             let docPrac = document.createElement('p')
-            docPrac.innerText = doctor.practice
+            docPrac.innerText = `Practice: ${doctor.practice}`
 
             let docNum = document.createElement('p')
-            docNum.innerText = doctor.phone_number
+            docNum.innerText = `Phone Number: ${doctor.phone_number}`
 
             let docForm = document.createElement('p')
             docForm.innerHTML = `<form action="" method="get" class="form-example">
@@ -173,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <input type="date" date="date" id="date" required><br>
               <label for="name">Please enter shadow duration by day: </label>
               <input type="text" length="length" id="length" required><br>
-              <input type="submit" data-id=${doctor.id} name="submit" value="Schedule Appointment" class="submit-appt"
+              <input type="submit" data-id=${doctor.id} data-docname=${doctor.name} name="submit" value="Schedule Appointment" class="submit-appt"
             </div>
             </form>
             `
@@ -181,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let btn = document.createElement('button')
             btn.setAttribute('class', 'schedule-btn')
             btn.setAttribute('id', doctor.id)
+
             btn.innerText = "Schedule"
 
             //redirect button once clicked
@@ -192,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
               let divCard = document.createElement('div')
               divCard.setAttribute('class', 'docCard')
               divCard.dataset.id = doctor.id
+              divCard.style.border = "#CCCCCC 1px solid"
               divCard.dataset.name = doctor.name
               divCard.dataset.practice = doctor.practice
               divCard.dataset.state = doctor.state
@@ -206,7 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 let currentStudent = document.querySelector('.currentStudent')
                 let id = currentStudent.dataset.id
                 console.log(id)        
+                let docName = doctor.name
+                let docPrac = doctor.practice
                 postShadow(event.target, id)
+                sendText(event.target, docName, docPrac)
             })
             }
         }
@@ -242,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
           date.innerText = `Date: ${shadow.start_date}`
 
           let length = document.createElement('p')
-          length.innerText = `Length: ${shadow.length}`
+          length.innerText = `Duration of Shadow: ${shadow.length} Days`
 
           let deleteBtn = document.createElement('button')
           deleteBtn.innerText = "Cancel"
@@ -262,6 +270,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     } 
                   })
      }
+    }
+
+    function sendText(event, docName, docPrac) {
+      client.messages.create({
+        to: '+17046506743',
+        from: '+17653798136',
+        body: `You have set an appointment with ${docName}, who is in ${docPrac} on ${event.date.value}`
+      });
     }
   
 })
