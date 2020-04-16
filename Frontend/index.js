@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let docNum = document.createElement('p')
             docNum.innerText = doctor.phone_number
 
-            let form = document.createElement('p')
-            form.innerHTML = `<form action="" method="get" class="form-example">
+            let scheduleForm = document.createElement('p')
+            scheduleForm.innerHTML = `<form action="" method="get" class="form-example">
             <div class="form-example">
               <label for="name">Please choose enter a date: </label>
               <input type="date" date="date" id="date" required>
@@ -46,14 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.setAttribute('class', 'schedule-btn')
             btn.setAttribute('id', doctor.id)
             btn.innerText = "Schedule"
-            //btn.addEventListener('click', (e) => {
-            //    console.log(e.target.dataset);
-            //    likes(e)
-            //  })
+
+            //redirect button once clicked
+            btn.addEventListener('click', (e) => {
+               console.log(e.target.dataset);
+               likes(e)
+             })
             
               let divCard = document.createElement('div')
               divCard.setAttribute('class', 'docCard')
-              divCard.append(docName, docCity, docPrac, docNum, form, btn)
+              divCard.append(docName, docCity, docPrac, docNum, scheduleForm, btn)
               doctorsList.append(divCard)
               
             
