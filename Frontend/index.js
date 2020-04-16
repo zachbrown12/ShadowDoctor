@@ -4,23 +4,63 @@ document.addEventListener("DOMContentLoaded", () => {
     let doctorsList = document.querySelector('.doctors')
     let studentForm = document.querySelector('#student-form')
     let shadowsList = document.querySelector('.shadows')
-    let searchBar = document.querySelector('#search-form')
-    //search bar
-    searchBar.addEventListener('keyup', function(e){
-      const term = e.target.value.toLowerCase()
-      const practice = list.getElementsByTagName('p')
-      Array.from(practice).forEach(function(practice){
-        const title =practice.firstElementChild.textContent
-        if(title.toLowerCase().indexOf(term)!=-1){
-          practice.style.display = 'block'
-        } else{
-          practice.style.display = 'none'
-        }
-      })
-    })
+    let pracSearch = document.querySelector('#practiceSearch')
+    let stateSearch = document.querySelector('#stateSearch')
+
+
 
     fetchDoctors()
     fetchShadows()
+
+    //search bar 
+    pracSearch.addEventListener('keyup', function(e){
+      if (e.target.id === 'practiceSearch') {
+      //set up filter
+      let input = document.querySelector('#practiceSearch')
+      let filter = input.value.toUpperCase()
+      let doctor = doctorsList.getElementsByClassName('docCard')
+
+      //loop and filter
+      for (i = 0; i < doctor.length; i++){
+        let currentPrac = doctor[i].dataset.practice
+        if (currentPrac) {
+            if (currentPrac.toUpperCase().indexOf(filter) > -1) {
+              doctor[i].style.display = "";
+            }
+            else {
+              doctor[i].style.display = "none";
+              }
+            
+          }
+        }
+      }
+      })
+
+      // state search
+      stateSearch.addEventListener('keyup', function(e){
+        if (e.target.id === 'stateSearch') {
+          //set up filter
+        let input = document.querySelector('#stateSearch')
+        let filter = input.value.toUpperCase()
+        let doctor = doctorsList.getElementsByClassName('docCard')
+  
+        //loop and filter
+        for (i = 0; i < doctor.length; i++){
+          let currentState = doctor[i].dataset.state
+          if (currentState) {
+              if (currentState.toUpperCase().indexOf(filter) > -1) {
+                doctor[i].style.display = "";
+              }
+              else {
+                doctor[i].style.display = "none";
+                }
+              
+            }
+          }
+        }
+        })
+  
+
     //listing doctors API
     function fetchDoctors() {
       fetch(`http://localhost:3000/doctors`) 
@@ -92,6 +132,21 @@ document.addEventListener("DOMContentLoaded", () => {
       fetchShadows()
     })
   }
+
+
+  function deleteShadow(id){
+    console.log(id)
+    fetch(`http://localhost:3000/shadows/${id}`, {
+    method: "DELETE"
+  })
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(student) {
+   // fetchShadows()
+  })
+  }
+
     
 
 
@@ -136,6 +191,10 @@ document.addEventListener("DOMContentLoaded", () => {
             
               let divCard = document.createElement('div')
               divCard.setAttribute('class', 'docCard')
+              divCard.dataset.id = doctor.id
+              divCard.dataset.name = doctor.name
+              divCard.dataset.practice = doctor.practice
+              divCard.dataset.state = doctor.state
               divCard.append(docName, docCity, docPrac, docNum, docForm)
               doctorsList.append(divCard)
               
@@ -167,17 +226,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
         
     
-    //   // delete button 
-    // let deleteBtn = document.createElement('p')
-    // deleteBtn.innerText = "Cancel"
-
-    //  //redirect button once clicked
-    //  deletebtn.addEventListener('click', (e) => {
-    //   if(event.target.dataset.purpose === 'delete'){
-    //     let deletebtn = event.target
-    //     deletebtn.parentNode.remove()
-    //   }
-    // })
 
     function renderShadows(shadows){
       shadowsList.innerHTML = ''
@@ -195,12 +243,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
           let length = document.createElement('p')
           length.innerText = `Length: ${shadow.length}`
+
+          let deleteBtn = document.createElement('button')
+          deleteBtn.innerText = "Cancel"
+          deleteBtn.dataset.id = shadow.id
+          deleteBtn.dataset.purpose = 'delete'
           
             let divCard = document.createElement('div')
             divCard.style.border = "#CCCCCC 1px solid"
             divCard.setAttribute('class', 'shadowCard', )
-            divCard.append(student, doctor, date, length)
+            divCard.append(student, doctor, date, length, deleteBtn)
             shadowsList.append(divCard)
+
+            deleteBtn.addEventListener('click', (e) => {
+                 if(event.target.dataset.purpose === 'delete'){
+                     deleteShadow(event.target.dataset.id)
+                     event.target.parentNode.remove()
+                    } 
+                  })
      }
     }
   
