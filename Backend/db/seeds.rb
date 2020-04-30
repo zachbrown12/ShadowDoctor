@@ -13,7 +13,7 @@ skip = 0
 
 50.times do 
     i = 0
-    doc_source = RestClient.get "https://api.1up.health/fhir/dstu2/Practitioner?_public=true&client_id=f1c1817ab463454b95b30282b5d83e2e&client_secret=K3gTbYeeiedmqCB97t5Nk1sdt3Gx5Go2&_skip=#{skip}", {:Authorization => 'Bearer fc4772804214498abebeee9485c3e2f7'}
+    doc_source = RestClient.get "https://api.1up.health/fhir/dstu2/Practitioner?_public=true
     doctors = JSON.parse(doc_source)
     skip += 10
      10.times do
